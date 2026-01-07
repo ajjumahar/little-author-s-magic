@@ -5,24 +5,12 @@ import { Button } from "@/components/ui/button";
 import FloatingElements from "@/components/decorations/FloatingElements";
 import heroBanner from "@/assets/hero-banner.png";
 import bookCover1 from "@/assets/book-cover-1.png";
-import bookCover2 from "@/assets/book-cover-2.png";
-import bookCover3 from "@/assets/book-cover-3.png";
 
 const Home = () => {
-  const featuredBooks = [
-    {
-      title: "The Magical Forest",
-      cover: bookCover1,
-    },
-    {
-      title: "Ocean Adventures",
-      cover: bookCover2,
-    },
-    {
-      title: "Cloud Kingdom",
-      cover: bookCover3,
-    },
-  ];
+  const featuredBook = {
+    title: "The Magical Forest Friends",
+    cover: bookCover1,
+  };
 
   return (
     <div className="min-h-screen">
@@ -65,7 +53,7 @@ const Home = () => {
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight"
             >
               Hi! I'm a{" "}
-              <span className="text-primary">young author</span> who loves
+              <span className="text-primary">little explorer</span> who loves
               writing{" "}
               <span className="text-secondary-foreground bg-secondary px-3 py-1 rounded-xl">
                 magical stories
@@ -148,7 +136,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Books */}
+      {/* Featured Book */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
@@ -158,36 +146,32 @@ const Home = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Featured Books <BookOpen className="inline w-8 h-8 text-primary" />
+              My Book <BookOpen className="inline w-8 h-8 text-primary" />
             </h2>
             <p className="text-muted-foreground text-lg">
-              Discover magical stories waiting just for you!
+              Discover a magical story waiting just for you!
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {featuredBooks.map((book, index) => (
-              <motion.div
-                key={book.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10, rotate: index === 1 ? 0 : index === 0 ? 3 : -3 }}
-                className="relative group"
-              >
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-card-magical border border-border bg-card">
-                  <img
-                    src={book.cover}
-                    alt={book.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <h3 className="text-primary-foreground font-bold text-xl">{book.title}</h3>
-                </div>
-              </motion.div>
-            ))}
+          <div className="max-w-sm mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+              className="relative group"
+            >
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-card-magical border border-border bg-card">
+                <img
+                  src={featuredBook.cover}
+                  alt={featuredBook.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <h3 className="text-primary-foreground font-bold text-xl">{featuredBook.title}</h3>
+              </div>
+            </motion.div>
           </div>
 
           <motion.div
@@ -198,7 +182,7 @@ const Home = () => {
           >
             <Link to="/books">
               <Button variant="coral" size="lg">
-                See All My Books
+                Read More About My Book
               </Button>
             </Link>
           </motion.div>

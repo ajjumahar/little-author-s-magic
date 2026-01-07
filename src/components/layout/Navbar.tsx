@@ -30,7 +30,7 @@ const Navbar = () => {
               <BookOpen className="w-5 h-5 text-primary-foreground" />
             </motion.div>
             <span className="text-xl font-bold text-foreground hidden sm:block">
-              Little Author
+              Little Explorer
             </span>
             <Sparkles className="w-4 h-4 text-sunshine animate-sparkle" />
           </Link>

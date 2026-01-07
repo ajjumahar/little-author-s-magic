@@ -13,7 +13,7 @@ const Footer = () => {
                 <BookOpen className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold text-foreground">
-                Little Author
+                Little Explorer
               </span>
               <Sparkles className="w-4 h-4 text-sunshine" />
             </Link>
@@ -55,7 +55,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm text-center md:text-left">
-            © {new Date().getFullYear()} Little Author. Made with{" "}
+            © {new Date().getFullYear()} Little Explorer. Made with{" "}
             <Heart className="w-4 h-4 inline text-primary animate-gentle-bounce" />{" "}
             and lots of imagination.
           </p>

@@ -6,11 +6,11 @@ import bookCover1 from "@/assets/book-cover-1.png";
 
 const book = {
   id: 1,
-  title: "The Magical Forest Friends",
-  description: "Join Emma as she discovers a secret forest where animals talk, flowers sing, and every tree holds a wonderful secret! A heartwarming tale about friendship and the magic of nature.",
+  title: "Tu the Turtle God",
+  description: "A magical tale about Tu, a wise and wonderful turtle who embarks on an extraordinary adventure. Join this heartwarming story filled with friendship, courage, and the wonders of nature!",
   ageGroup: "Ages 5-9",
   coverImage: bookCover1,
-  buyLink: "https://amazon.com",
+  buyLink: "https://www.bribooks.com/bookstore/tu-the-turtle-god-by-jisha-negi",
 };
 
 const Books = () => {

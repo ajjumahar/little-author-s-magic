@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { BookOpen, Sparkles } from "lucide-react";
 import BookCard from "@/components/books/BookCard";
 import FloatingElements from "@/components/decorations/FloatingElements";
-import bookCover1 from "@/assets/book-cover-1.png";
+import bookCover from "@/assets/tu-the-turtle-god-cover.png";
 
 const book = {
   id: 1,
   title: "Tu the Turtle God",
   description: "A magical tale about Tu, a wise and wonderful turtle who embarks on an extraordinary adventure. Join this heartwarming story filled with friendship, courage, and the wonders of nature!",
   ageGroup: "Ages 5-9",
-  coverImage: bookCover1,
+  coverImage: bookCover,
   buyLink: "https://www.bribooks.com/bookstore/tu-the-turtle-god-by-jisha-negi",
 };
 

@@ -4,12 +4,12 @@ import { BookOpen, Heart, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FloatingElements from "@/components/decorations/FloatingElements";
 import heroBanner from "@/assets/hero-banner.png";
-import bookCover1 from "@/assets/book-cover-1.png";
+import bookCover from "@/assets/tu-the-turtle-god-cover.png";
 
 const Home = () => {
   const featuredBook = {
-    title: "The Magical Forest Friends",
-    cover: bookCover1,
+    title: "Tu the Turtle God",
+    cover: bookCover,
   };
 
   return (

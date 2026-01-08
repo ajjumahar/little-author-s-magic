@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
-import { BookOpen, Heart, Lightbulb, Sparkles, Star, Target } from "lucide-react";
+import { BookOpen, Heart, Lightbulb, Sparkles, Star, MapPin, Plane, Music } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import FloatingElements from "@/components/decorations/FloatingElements";
 
 const About = () => {
   const milestones = [
-    { icon: Star, label: "Started writing at age 6", color: "text-sunshine" },
+    { icon: Star, label: "Class 4th student", color: "text-sunshine" },
     { icon: BookOpen, label: "Published my first book", color: "text-coral" },
-    { icon: Heart, label: "Thousands of happy readers", color: "text-primary" },
-    { icon: Target, label: "Working on more books!", color: "text-sky" },
+    { icon: Plane, label: "Travelled across India & abroad", color: "text-sky" },
+    { icon: Music, label: "4th year Bharatnatyam student", color: "text-lavender" },
   ];
 
   return (
@@ -32,10 +32,10 @@ const About = () => {
               <Sparkles className="w-10 h-10 text-primary-foreground" />
             </motion.div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              About the Author <Sparkles className="inline w-8 h-8 text-sunshine animate-sparkle" />
+              Hi, I'm Jisha Negi! <Sparkles className="inline w-8 h-8 text-sunshine animate-sparkle" />
             </h1>
             <p className="text-xl text-muted-foreground">
-              Meet the young storyteller behind the magic!
+              A young explorer who loves reading, travelling, and learning new things!
             </p>
           </motion.div>
         </div>
@@ -59,7 +59,7 @@ const About = () => {
                   className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3"
                 >
                   <Heart className="w-8 h-8 text-primary animate-gentle-bounce" />
-                  My Story
+                  About Me
                 </motion.h2>
                 
                 <motion.p
@@ -68,41 +68,68 @@ const About = () => {
                   viewport={{ once: true }}
                   className="text-muted-foreground text-lg leading-relaxed mb-6"
                 >
-                  She is a young storyteller who believes every child has magic inside them. 
-                  From the moment she could hold a pencil, she's been creating worlds filled 
-                  with wonder, adventure, and friendship. Her imagination knows no bounds – 
-                  whether she's writing about talking animals in enchanted forests or brave 
-                  heroes exploring underwater kingdoms.
-                </motion.p>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
-                  className="text-muted-foreground text-lg leading-relaxed mb-6"
-                >
-                  Her love for stories began when her parents read to her every night. Those 
-                  magical moments inspired her to create her own tales – stories that would 
-                  make other children feel the same wonder and joy she felt. Today, she 
-                  spends her free time writing, drawing, and dreaming up new adventures.
+                  I am a student of class 4th at Smt. R.S.B. Arya Vidya Mandir, Juhu. I love reading, 
+                  travelling, exploring nature, and learning new things. I also write! I might be only 
+                  9 years old but I have already visited many parts of India — from the snowy mountains 
+                  of Kargil, Kashmir, Himachal, and Uttarakhand to the forests of Assam, the beaches of 
+                  Goa and Udupi, and the historic cities of Lucknow and Mysore.
                 </motion.p>
 
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                  className="bg-muted/50 rounded-2xl p-6 my-8"
+                  transition={{ delay: 0.1 }}
+                  className="bg-sky/10 rounded-2xl p-6 my-8"
                 >
                   <div className="flex items-start gap-4">
-                    <Lightbulb className="w-8 h-8 text-sunshine flex-shrink-0" />
+                    <Plane className="w-8 h-8 text-sky flex-shrink-0" />
                     <div>
-                      <h3 className="font-bold text-foreground mb-2">Where Do Ideas Come From?</h3>
+                      <h3 className="font-bold text-foreground mb-2">My Adventures Abroad</h3>
                       <p className="text-muted-foreground">
-                        "My ideas come from everywhere! Sometimes I see a butterfly and wonder 
-                        where it's going. Sometimes I dream about magical places at night. 
-                        And sometimes, I just start drawing and a whole story appears!"
+                        I have also travelled to the Maldives, Thailand, and the USA. In Florida, I went to 
+                        an elementary school for the short time I was in Tampa Bay. In the USA, I visited 
+                        famous places like NASA, Disneyland and watched "The Lion King" at Broadway in New York!
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="bg-lavender/10 rounded-2xl p-6 my-8"
+                >
+                  <div className="flex items-start gap-4">
+                    <MapPin className="w-8 h-8 text-lavender flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold text-foreground mb-2">Unforgettable Experiences</h3>
+                      <p className="text-muted-foreground">
+                        I have climbed apricot trees in Kargil, ridden a shikara in Kashmir, seen two-hump 
+                        camels in Ladakh, watched dolphins in Northeast India, played in the snow in Manali 
+                        and Patnitop, and explored temples, beaches, and forests across India.
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="bg-coral/10 rounded-2xl p-6 my-8"
+                >
+                  <div className="flex items-start gap-4">
+                    <BookOpen className="w-8 h-8 text-coral flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold text-foreground mb-2">My Love for Reading</h3>
+                      <p className="text-muted-foreground">
+                        My favourite authors are Enid Blyton, J.K. Rowling, Sudha Murthy, and Rick Riordan 
+                        (Percy Jackson). I have read all of Tintin, and classical biographies like Marie 
+                        Curie, Gandhi, Einstein, Jhansi Ki Rani, and Dhyan Chand.
                       </p>
                     </div>
                   </div>
@@ -112,14 +139,32 @@ const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                  className="text-muted-foreground text-lg leading-relaxed"
+                  transition={{ delay: 0.4 }}
+                  className="text-muted-foreground text-lg leading-relaxed mb-6"
                 >
-                  Her dream? To become a full-time author and illustrator, creating stories 
-                  that will be loved by children all around the world. She believes that 
-                  through stories, we can learn kindness, bravery, and the importance of 
-                  following our dreams – no matter how young we are.
+                  I am an outdoor person and enjoy swimming, gymnastics, cycling, trekking, and art. 
+                  I am also a 4th year student of Bharatnatyam at Nalanda Dance Institute at Juhu, Mumbai.
                 </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 }}
+                  className="bg-sunshine/10 rounded-2xl p-6 my-8"
+                >
+                  <div className="flex items-start gap-4">
+                    <Lightbulb className="w-8 h-8 text-sunshine flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold text-foreground mb-2">What Travel Has Taught Me</h3>
+                      <p className="text-muted-foreground">
+                        Travelling has taught me about nature, animals, people, and different cultures. 
+                        I am grateful to my parents, my school, and God for giving me so many opportunities 
+                        to explore this beautiful world. I hope to explore many more places!
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -135,7 +180,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-3xl font-bold text-foreground text-center mb-12"
           >
-            My Writing Journey ✨
+            My Journey ✨
           </motion.h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -174,9 +219,9 @@ const About = () => {
                   See My Books
                 </Button>
               </Link>
-              <Link to="/art">
+              <Link to="/support">
                 <Button variant="sky" size="lg">
-                  View My Art
+                  Support My Writing
                 </Button>
               </Link>
             </div>

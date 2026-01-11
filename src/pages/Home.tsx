@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { BookOpen, Heart, Sparkles, Star } from "lucide-react";
+import { BookOpen, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FloatingElements from "@/components/decorations/FloatingElements";
 import heroBanner from "@/assets/hero-banner.png";
@@ -80,12 +80,6 @@ const Home = () => {
                 <Button variant="coral" size="xl" className="gap-2">
                   <BookOpen className="w-5 h-5" />
                   Explore My Books
-                </Button>
-              </Link>
-              <Link to="/support">
-                <Button variant="outline" size="xl" className="gap-2">
-                  <Heart className="w-5 h-5" />
-                  Support My Writing
                 </Button>
               </Link>
             </motion.div>
@@ -189,31 +183,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-lavender/30 via-sky/20 to-peach/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center bg-card/80 backdrop-blur-sm rounded-3xl p-10 shadow-card-magical border border-border"
-          >
-            <Heart className="w-12 h-12 text-primary mx-auto mb-6 animate-gentle-bounce" />
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Help Me Write More Stories!
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Your support helps me create new adventures, work with illustrators, 
-              and share my stories with kids around the world!
-            </p>
-            <Link to="/support">
-              <Button variant="magical" size="xl">
-                Support My Dream ✨
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };
